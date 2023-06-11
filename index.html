@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment Form</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- End Font -->
+
+    <link
+      name="font-awesome"
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/assets/css/custom.css"
+    />
+    <link rel="stylesheet" type="text/css" href="public/assets/css/modal.css" />
+  </head>
+  <body>
+    <nav id="nav-bar" class="nav-bar">
+      <ul>
+        <img
+          style="margin: 15px 0 14px 30px"
+          class="nav-logo"
+          id="nav-logo"
+          src="public/assets/img/nw-horizontal.png"
+          alt=""
+        />
+      </ul>
+    </nav>
+
+    <div class="recruitment">
+      <div class="container-vectorize">
+        <div class="wrapper-image">
+          <img
+            class="starlid"
+            src="https://cdn.neuronworks.co.id/v0.3.8/dev/assets/img/other/Starlid-illustration.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <form class="container-form" id="form-rekrutasi">
+        <div class="card">
+          <div class="container">
+              <img
+                src="public/assets/img/logomark-sign.png"
+                alt=""
+                style="width: 7rem; margin-bottom: 16px"
+              />
+              <div class="form-description">
+                <h3 style="font-size: 28px">Form Rekrutasi</h3>
+                <p style="font-size: small">
+                  Isi data di bawah sesuai dengan identitas diri anda dan
+                  lowongan yang akan anda pilih
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label class="text-small"style="margin-bottom: 10px" for="Fullname"
+                  >Fullname <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="Fullname"
+                  class="form-control"
+                  id="Fullname"
+                  placeholder="Masukan nama"
+                />
+                <span class="text-small text-danger alert" id="FullnameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="text-small"for="Email"
+                  >Email <span class="text-danger">*</span>
+                </label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="Email"
+                  id="Email"
+                  placeholder="Masukan email"
+                />
+                <span class="text-small text-danger alert" id="EmailError"></span>
+
+              </div>
+
+              <div class="form-group">
+                <label class="text-small"for="Phone Number"
+                  >Phone Number <span class="text-danger">*</span>
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="PhoneNumber"
+                  id="PhoneNumber"
+                  placeholder="Masukan Phone Number"
+                />
+                <span class="text-small text-danger alert" id="PhoneNumberError"></span>
+
+              </div>
+
+              <div class="form-group">
+                <label class="text-small"for="Vacancy"
+                  >Vacancy <span class="text-danger">*</span>
+                </label>
+                <select onchange="kuotaCheck()" class="form-control" name="Vacancy" id="Vacancy">
+                  <option value="">- Pilih Lowongan -</option>
+                </select>
+                <span class="text-small text-danger alert" id="VacancyError"></span>
+
+              </div>
+
+              <div class="form-group">
+                <label class="text-small"for="Position"
+                  >Position <span class="text-danger">*</span>
+                </label>
+                <select class="form-control" name="Position" id="Position">
+                  <option value="">- Pilih Posisi -</option>
+                </select>
+                <span class="text-small text-danger alert" id="PositionError"></span>
+
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="btnSubmit">Kirim</button>
+          </div>
+          <div class="footer">
+            <ul>
+              <li>
+                <a href="https://instagram.com/neuronworks">
+                  <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@NeuronworksIndonesia">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/neuronworks">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/neuronworks/">
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+
+            <a style="font-size: small" href="https://www.neuronworks.co.id">
+              www.neuronworks.co.id
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Data Form Rekrutasi</h2>
+        </div>
+        <div class="modal-body">
+          <table>
+            <tr>
+              <td>
+                <p>Fullname</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalFullname"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Email</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalEmail"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>PhoneNumber</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalPhoneNumber"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Vacancy</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalVacancy"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Position</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalPosition"></span>
+              </td>
+            </tr>
+          </table>
+          <hr>
+          <table>
+            <tr>
+              <td>
+                <p>Jumlah Pendaftar</p>
+              </td>
+              <td>:</td>
+              <td>
+                <span class="modal-span" id="modalJumlahPendaftar"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="public/assets/js/select.js"></script>
+
+<script>
+  
+  
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("btnSubmit");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+
+  let data = [];
+
+  let lowonganDipilih="";
+  let lowongan="";
+  let validated = true;
+
+
+  function kuotaCheck(){
+    lowonganDipilih = document.getElementById("Vacancy").value;
+    lowongan = vacancyData.find(function (data) {
+      return data.nama === lowonganDipilih;
+    });
+    if(lowongan.kuota <= 2 && lowongan.kuota > 0){
+      document.getElementById('VacancyError').innerHTML = `Kuota tersisa untuk ${lowongan.nama} hanya ${lowongan.kuota} pendaftar.`;
+      validated = true;
+
+    }else if(lowongan.kuota == 0){
+      document.getElementById('VacancyError').innerHTML = `Mohon maaf, rekrutasi untuk ${lowongan.nama} sudah penuh. dan tidak dapat dipilih.`;
+      validated = false;
+    }else{
+      document.getElementById('VacancyError').innerHTML = `Anda dapat memilih lowongan ${lowongan.nama}. `;
+      validated = true;
+
+    }
+
+
+  }
+
+  // When the user clicks the button, open the modal
+  const form = document.getElementById("form-rekrutasi");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah form dikirim secara langsung
+
+  // btn.onclick = function () {
+
+    const dataArray = [];
+
+    // Get data from form
+    const Fullname = document.getElementById("Fullname").value;
+    const Email = document.getElementById("Email").value;
+    const PhoneNumber = document.getElementById("PhoneNumber").value;
+    const Vacancy = document.getElementById("Vacancy").value;
+    const Position = document.getElementById("Position").value;
+
+    const emailTerdaftar = data.find(function (data) {
+      return data.Email === Email;
+    });
+
+    // validasi
+    if(Fullname === ""){
+      document.getElementById('FullnameError').innerHTML = "Fullname Harus Diisi";
+      validated = false;
+    }
+    if( Email === ""){
+      document.getElementById('EmailError').innerHTML = "Email Harus Diisi";
+      validated = false;
+    }else if(emailTerdaftar){
+      document.getElementById('EmailError').innerHTML = "Email sudah terdaftar";
+      validated = false;
+    }
+    if( PhoneNumber === ""){
+      document.getElementById('PhoneNumberError').innerHTML = "Phone Number Harus Diisi";
+      validated = false;
+    }
+    if( Vacancy === ""){
+      document.getElementById('VacancyError').innerHTML = "Vacancy Harus Diisi";
+      validated = false;
+    }
+    if( Position ===""){
+      document.getElementById('PositionError').innerHTML = "Position Harus Diisi"; 
+      validated = false;
+    } 
+
+    
+    
+    
+    if(validated){
+
+      // menyimpan data ke array
+      dataArray["Fullname"] = Fullname;
+      dataArray["Email"] = Email;
+      dataArray["PhoneNumber"] = PhoneNumber;
+      dataArray["Vacancy"] = Vacancy;
+      dataArray["Position"] = Position;
+
+      data.push(dataArray);
+
+      // dikurangi 1 ketika berhasil menyimpan data
+      lowongan.kuota = lowongan.kuota -1;
+
+      console.log("berhasil")
+      console.log("data yang tersimpan",data)
+      console.log("data lowongan saat ini", vacancyData);
+
+      // menampilkan data ke modal
+      modal.style.display = "block";
+
+      for (const key in data[data.length -1]) {
+        document.getElementById("modal" + key).innerHTML = data[data.length -1][key];
+      }
+
+      document.getElementById("modalJumlahPendaftar").innerHTML = data.length;
+
+
+      // Mereset form setelah berhasil ditambahkan ke dalam tabel
+      document.getElementById('FullnameError').innerHTML = "";
+      document.getElementById('EmailError').innerHTML = "";
+      document.getElementById('EmailError').innerHTML = "";
+      document.getElementById('PhoneNumberError').innerHTML = "";
+      document.getElementById('VacancyError').innerHTML = "";
+      document.getElementById('PositionError').innerHTML = ""; 
+      
+      form.reset();
+    }
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
